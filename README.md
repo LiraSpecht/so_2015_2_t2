@@ -41,3 +41,4 @@ O programa de testes deve estressar as capacidades do serviço de versionamento,
 * Anatomy of dynamic linux libraries - IBM. http://www.ibm.com/developerworks/library/l-dynamic-libraries/
 * Ulrich Drepper. How To Write Shared Libraries. http://www.akkadia.org/drepper/dsohowto.pdf
 * Program Library HOWTO. http://tldp.org/HOWTO/Program-Library-HOWTO/miscellaneous.html
+* MAN flock. http://man7.org/linux/man-pages/man2/flock.2.html
