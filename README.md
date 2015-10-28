@@ -14,6 +14,7 @@ O arquivo <versionfs.h> define as chamadas (similares às chamadas tradicionais 
 4. Se uma versão do arquivo está sendo escrito, ele não pode ser aberto por outro processo ou thread na mesma versão e quem chamar a função deve ficar bloqueado.
 5. A numeração de versões deve persistir entre reinicializações do sistema.
 6. O arquivo original acessado não é mantido, mas sim um link soft para o mesmo no sistema de arquivos com versionamento (explicação em aula).
+7. Cada versão nova é uma cópia completa do arquivo na versão anterior, ou seja, a versão 5 começa como uma cópia da versão 4.
 
 ## Implementação
 
@@ -28,13 +29,20 @@ Código de inicialização na biblioteca pode ser chamado usando a seguinte cons
 __attribute__((constructor)) void init_me(void) {
 }
 
+* IMPORTANTE: o arquivo header NÃO DEVE SER MODIFICADO EM HIPÓTESE ALGUMA. O Makefile pode ser modificado, desde que all, clean, init e test continuem funcionando.
+
+* IMPORTANTE: o código deve ser legível, em C ou C++, documentado e executar em Linux. 
+
+
 ## Testes
 
 O programa de testes deve estressar as capacidades do serviço de versionamento, procurando casos extremos onde poderia se esperar falhas. Deve também estar bem documentado. 
 
 ## Cronograma
 
-
+- 03/11 - Dúvidas sobre o trabalho e a interface a ser implementada (em aula). Eventuais mudanças de grupo devem ser feitas até este dia.
+- 15/11 - Entrega parcial 1 (contendo código para versionar, sem necessidade de sincronização) (via github, tag EP1)
+- 30/11 - ENTREGA FINAL (via github)
 
 ## Referências
 
